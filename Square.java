@@ -17,6 +17,12 @@ public class Square{
         //place piece here
         this.piece = piece;
     }
+    
+    public boolean isOccupied() {
+        if(piece != null)
+            return true;
+        return false;
+    }
 
     public Piece releaseSquare() {
         Piece releasedPiece = this.piece;
