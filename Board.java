@@ -1,17 +1,20 @@
+/**
+ * Created by kumardu on 7/30/2016.
+ */
 public class Board {
-    private Square[][] squares = new Square[8][8];
+    private Spot[][] spots = new Spot[8][8];
 
     public Board() {
         super();
-        for(int i=0; i<squares.length; i++){
-            for(int j=0; j<squares.length; j++){
-                this.squares[i][j] = new Square(i, j);
+        for(int i=0; i<spots.length; i++){
+            for(int j=0; j<spots.length; j++){
+                this.spots[i][j] = new Spot(i, j);
             }
         }
     }
 
-    public Square getSquare(int x, int y) {
-        return squares[x][y];
+    public Spot getSpot(int x, int y) {
+        return spots[x][y];
     }
 
 }
