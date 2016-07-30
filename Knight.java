@@ -3,18 +3,18 @@
  */
 public class Knight extends Piece{
 
-    public Knight(boolean available, int x, int y) {
-        super(available, x, y);
+    public Knight(boolean available, int rank, int file) {
+        super(available, rank, file);
     }
 
     @Override
-    public boolean isValid(Board board, int fromX, int fromY, int toX, int toY) {
-        if(super.isValid(board, fromX, fromY, toX, toY) == false)
+    public boolean isValid(Board board, int fromRank, int fromFile, int toRank, int toFile) {
+        if(super.isValid(board, fromRank, fromFile, toRank, toFile) == false)
             return false;
 
-        if(toX != fromX - 1 && toX != fromX + 1 && toX != fromX + 2 && toX != fromX - 2)
+        if(toRank != fromRank - 1 && toRank != fromRank + 1 && toRank != fromRank + 2 && toRank != fromRank - 2)
             return false;
-        if(toY != fromY - 2 && toY != fromY + 2 && toY != fromY - 1 && toY != fromY + 1)
+        if(toFile != fromFile - 2 && toFile != fromFile + 2 && toFile != fromFile - 1 && toFile != fromFile + 1)
             return false;
 
         return true;
